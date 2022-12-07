@@ -1,10 +1,5 @@
-#![allow(unused_variables)]
-//Command above ignores unused variables
-
-
 /// This is the Basic of Rust
-/// This is not a fully working program
-
+//! This is not a fully working program
 //! # Variable Printing Examples
 //! 
 //! ```
@@ -22,7 +17,11 @@ fn main() {
     println!("{} is {} years old, weighs {} pounds, isMale: {}, isTall: {}", name, age, weight, isMale, isTall);
 
     //Where is matters
-    let amount = 100000000000000000000000;
-    
+    failedPrint();
 
+}
+
+fn failedPrint() {
+    let amount = 100000000000000000000000;
+    println!("Amount: {}", amount); // This will error out
 }
