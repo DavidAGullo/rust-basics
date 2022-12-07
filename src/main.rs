@@ -1,0 +1,28 @@
+#![allow(unused_variables)]
+//Command above ignores unused variables
+
+
+/// This is the Basic of Rust
+/// This is not a fully working program
+
+//! # Variable Printing Examples
+//! 
+//! ```
+//! fn main() 
+//! ```
+//! This provides main function all available variables in scope of the function
+//! this will do nothing currently
+fn main() {
+    let name :&str = "John";
+    let age :i32 = 43;
+    let weight = 180.5;
+    let isMale = true;
+    let isTall = false;
+    // Printing all variables
+    println!("{} is {} years old, weighs {} pounds, isMale: {}, isTall: {}", name, age, weight, isMale, isTall);
+
+    //Where is matters
+    let amount = 100000000000000000000000;
+    
+
+}
