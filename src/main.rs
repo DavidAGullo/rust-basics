@@ -6,6 +6,9 @@
 //! ```
 //! This provides main function all available variables in scope of the function
 //! this will do nothing currently
+
+#![allow(dead_code)]
+
 fn main() {
     let name :&str = "John";
     let age :i32 = 43;
@@ -18,7 +21,7 @@ fn main() {
     //Where is matters
     //failedPrint();
     good_print();
-
+    variables_print();
 }
 
 fn failed_print() {
@@ -33,4 +36,9 @@ fn good_print() {
     println!("Amount: {}", amount); // This will error out
 
     //error: literal out of range for `i32`
+}
+fn variables_print() {
+    // Assign A a value of 15, B a value of 😁, C a value of Bean
+    let (a, b, c) = (15, '\u{1F601}', "Bean");
+    println!("{} {} {}", a, b, c);
 }
