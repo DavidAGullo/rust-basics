@@ -1,4 +1,3 @@
-/// This is the Basic of Rust
 //! This is not a fully working program
 //! # Variable Printing Examples
 //! 
@@ -24,4 +23,6 @@ fn main() {
 fn failedPrint() {
     let amount = 100000000000000000000000;
     println!("Amount: {}", amount); // This will error out
+
+    //error: literal out of range for `i32`
 }
