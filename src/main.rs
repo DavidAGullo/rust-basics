@@ -10,18 +10,26 @@ fn main() {
     let name :&str = "John";
     let age :i32 = 43;
     let weight = 180.5;
-    let isMale = true;
-    let isTall = false;
+    let is_male = true;
+    let is_tall = false;
     // Printing all variables
-    println!("{} is {} years old, weighs {} pounds, isMale: {}, isTall: {}", name, age, weight, isMale, isTall);
+    println!("{} is {} years old, weighs {} pounds, isMale: {}, isTall: {}", name, age, weight, is_male, is_tall);
 
     //Where is matters
-    failedPrint();
+    //failedPrint();
+    good_print();
 
 }
 
-fn failedPrint() {
-    let amount = 100000000000000000000000;
+fn failed_print() {
+    //let amount = 10000000000000000;
+    let amount = 2147483647;
+    println!("Amount: {}", amount); // This will error out
+
+    //error: literal out of range for `i32`
+}
+fn good_print() {
+    let amount :i64 = 10000000000000000;
     println!("Amount: {}", amount); // This will error out
 
     //error: literal out of range for `i32`
