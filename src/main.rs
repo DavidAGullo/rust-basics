@@ -17,7 +17,8 @@ fn main() {
 
     //Where is matters
     //failedPrint();
-    good_print();
+    //good_print();
+    reverse_string();
 
 }
 
@@ -33,4 +34,14 @@ fn good_print() {
     println!("Amount: {}", amount); // This will error out
 
     //error: literal out of range for `i32`
+}
+//Reverse String and print function
+fn reverse_string() {
+    let string = "Hello World";
+    let mut reversed = String::new();
+    for c in string.chars().rev() {
+        reversed.push(c);
+    }
+    println!("Reversed: {}", reversed);
+
 }
