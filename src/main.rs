@@ -1,14 +1,17 @@
 //! This is not a fully working program
-//! # Variable Printing Examples
+//! its mostly just snippets of code that I have used to learn rust
 //! 
-//! ```
-//! fn main() 
-//! ```
-//! This provides main function all available variables in scope of the function
-//! this will do nothing currently
 
+//allows for dead code to be ignored
+//Dead Code is code that is not used
 #![allow(dead_code)]
 
+
+/// ```
+/// fn main() 
+/// ```
+/// This provides main function all available variables in scope of the function
+/// this will do nothing currently
 fn main() {
     let name :&str = "John";
     let age :i32 = 43;
@@ -24,7 +27,11 @@ fn main() {
     //variables_print();
     string_func();
 }
-
+/// ```
+/// fn failed_print() 
+/// ```
+/// This code will always fail, because the number is too large for i32
+/// 
 fn failed_print() {
     //let amount = 10000000000000000;
     let amount = 2147483647;
@@ -32,12 +39,23 @@ fn failed_print() {
 
     //error: literal out of range for `i32`
 }
+
+/// ```
+/// fn good_print()
+/// ```
+/// This code will always work, because the number is large enough and can be stored in that data type
 fn good_print() {
     let amount :i64 = 10000000000000000;
     println!("Amount: {}", amount); // This will error out
 
     //error: literal out of range for `i32`
 }
+
+/// ```
+/// fn variables_print()
+/// ```
+/// This code will print out the variables a, b, and c
+/// each variable is written in different ways to show what is available to use
 fn variables_print() {
     // Assign A a value of 15, B a value of 😁, C a value of Bean
     let (a, b, c) = (15, '\u{1F601}', "Bean");
